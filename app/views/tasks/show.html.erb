@@ -1,0 +1,10 @@
+
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<%=link_to "Update", task_edit_path, class:"btn btn-primary"%>
+<%=link_to "Back to list", tasks_path, class:"btn btn-outline-secondary my-4" %>
+<%= link_to "Delete",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class:"btn btn-outline-danger" %>
